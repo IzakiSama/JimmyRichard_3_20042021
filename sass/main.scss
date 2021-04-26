@@ -1,0 +1,83 @@
+$clr-primaire : #9356DC;
+$clr-secondaire : #FF79DA;
+$clr-tertiaire : #99E2D0;
+$font-roboto : "Roboto", sans sérif;
+$font-shrikhand : "Shrikhand", sans sérif;
+
+@mixin bloc-shadow {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px lightgrey;
+    padding: 1.5em;
+}
+
+header > h1 {
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 2px 5px lightgrey;
+}
+
+.container {
+    padding: 0 1.3em;
+}
+
+.logo-header {
+    display: block;
+    margin: auto;
+    padding: 1.5em 0 1em 0;
+}
+
+.center-top {
+    text-align: center;
+    padding-bottom: 3em;
+    background-color: #F7F7F7;
+    &__research > input {
+        border: hidden;
+        text-align: center;
+        width: 100%;
+        padding: 1em 0;
+        background-color: #EDEDED;
+    }
+    &__texte > h2 {
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 1.5em;
+        padding: 1em 2em .5em 2em;
+    }
+    &__texte > p {
+        font-family: $font-roboto;
+        font-weight: 300;
+        font-size: 1.2em;
+        padding: .5em 1em;
+    }
+    &__texte > button {
+        margin-top: 1em;
+        padding: 1em;
+        border-radius: 30px;
+        border: hidden;
+        color: white;
+        font-family: $font-roboto;
+        font-weight: 400;
+        background: linear-gradient(to bottom right, $clr-secondaire, $clr-primaire);
+        box-shadow: 0 5px 7px lightgray;
+    }
+}
+
+.fa-map-marker-alt {
+    position: relative;
+    bottom: 2.1em;
+    right: 5em;
+}
+
+input::placeholder {
+    font-family: $font-roboto;
+    color: black
+}
+
+.fonctionnality {
+    &__card {
+        @include bloc-shadow;
+    }
+    &__card > p {
+        margin-left: 1em;
+    }
+}
