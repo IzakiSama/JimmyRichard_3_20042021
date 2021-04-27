@@ -5,7 +5,7 @@ header > h1 {
 }
 
 .container {
-  padding: 0 1.3em;
+  margin: 0 1.3em;
 }
 
 .logo-header {
@@ -61,14 +61,94 @@ input::placeholder {
   color: black;
 }
 
+.container > h2 {
+  margin-top: 1.7em;
+  font-family: "Roboto", sans sérif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.fonctionnality {
+  margin-bottom: 4em;
+}
+
 .fonctionnality__card {
   display: flex;
+  font-family: "Roboto", sans sérif;
+  font-weight: 500;
+  margin: 1.7em 0;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
   padding: 1.5em;
 }
+.fonctionnality__card:hover {
+  background-color: #F7F1FF;
+}
 .fonctionnality__card > p {
   margin-left: 1em;
+}
+
+.restaurant {
+  background-color: #F7F7F7;
+  padding-bottom: 2em;
+}
+
+.restaurant > h2 {
+  padding-top: 2em;
+  margin: 0 0 1em 1em;
+  margin-top: 1.7em;
+  font-family: "Roboto", sans sérif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.restaurant__card {
+  margin: 1.3em;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px lightgrey;
+  font-family: "Roboto", sans sérif;
+}
+
+.restaurant__card > h3 {
+  padding: 0 0 0 1em;
+  margin: 1em 0 0.5em 0;
+  font-weight: 700;
+}
+
+.restaurant__card > p {
+  padding: 0 0 1em 1em;
+}
+
+.restaurant__card > img {
+  object-fit: cover;
+  width: 100%;
+  height: 10em;
+  border-radius: 20px 20px 0 0;
+}
+
+.footer {
+  color: white;
+  background-color: #4a4240;
+  padding-bottom: 1.5em;
+}
+.footer__title {
+  font-family: "Shrikhand", sans sérif;
+  padding: 1.5em 0 0.5em 1.5em;
+  font-size: 1.1em;
+}
+.footer__list-nav > a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans sérif;
+  font-weight: 400;
+  display: flex;
+  margin: 0.5em 1.5em;
+}
+
+.fa-utensils, .fa-hands-helping {
+  font-size: 0.7em;
+  margin-right: 0.5em;
+  width: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

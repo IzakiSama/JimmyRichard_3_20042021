@@ -5,10 +5,16 @@ $font-roboto : "Roboto", sans sérif;
 $font-shrikhand : "Shrikhand", sans sérif;
 
 @mixin bloc-shadow {
-    display: flex;
     border-radius: 20px;
     box-shadow: 0 2px 5px lightgrey;
     padding: 1.5em;
+}
+
+@mixin accueil-h2 {
+    margin-top: 1.7em;
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 header > h1 {
@@ -17,7 +23,7 @@ header > h1 {
 }
 
 .container {
-    padding: 0 1.3em;
+    margin: 0 1.3em;
 }
 
 .logo-header {
@@ -73,11 +79,94 @@ input::placeholder {
     color: black
 }
 
+.container > h2 {
+    @include accueil-h2()
+}
+
+.fonctionnality {
+    margin-bottom: 4em;
+}
+
 .fonctionnality {
     &__card {
+        display: flex;
+        font-family: $font-roboto;
+        font-weight: 500;
+        margin: 1.7em 0;
         @include bloc-shadow;
+        &:hover {
+            background-color: #F7F1FF;
+        }
     }
     &__card > p {
         margin-left: 1em;
     }
+}
+
+.restaurant {
+    background-color: #F7F7F7;
+    padding-bottom: 2em;
+}
+
+.restaurant > h2 {
+    padding-top: 2em;
+    margin: 0 0 1em 1em;
+    @include accueil-h2()
+}
+
+.restaurant {
+    &__card {
+        margin: 1.3em;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px lightgrey;
+        font-family: $font-roboto;
+    }
+}
+
+.restaurant {
+    &__card > h3 {
+        padding: 0 0 0 1em;
+        margin: 1em 0 .5em 0;
+        font-weight: 700;
+    }
+}
+
+.restaurant {
+    &__card > p {
+        padding: 0 0 1em 1em;
+    }
+}
+
+.restaurant {
+    &__card > img{
+        object-fit: cover;
+        width: 100%;
+        height: 10em;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+.footer {
+    color: white;
+    background-color: hsl(12, 7%, 27%);
+    padding-bottom: 1.5em;
+    &__title {
+        font-family: $font-shrikhand;
+        padding: 1.5em 0 .5em 1.5em;
+        font-size: 1.1em;
+    }
+    &__list-nav > a {
+        color: white;
+        text-decoration: none;
+        font-family: $font-roboto;
+        font-weight: 400;
+        display: flex;
+        margin: .5em 1.5em;
+    }
+}
+
+.fa-utensils, .fa-hands-helping {
+    font-size: .7em;
+    margin-right: .5em;
+    width: 15px;
 }
