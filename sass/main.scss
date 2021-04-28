@@ -17,9 +17,46 @@ $font-shrikhand : "Shrikhand", sans sérif;
     font-size: 1.5em;
 }
 
+@mixin bloc-plat {
+    padding: .7em;
+    margin: 1em 1em 0 1em;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px lightgrey;
+    font-family: $font-roboto;
+    background-color: white;
+}
+
+.btn {
+    text-align: center;
+    &__order {
+        padding: 1em 3em;
+        margin: 3em 0;
+        text-align: center;
+        border-radius: 30px;
+        border: none;
+        background: linear-gradient(to bottom right, $clr-secondaire, $clr-primaire);
+        color: white;
+        font-family: $font-roboto;
+        box-shadow: 0 0 10px 7px lightgrey;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
 header > h1 {
     border-bottom: 1px solid lightgrey;
     box-shadow: 0 2px 5px lightgrey;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    &:visited {
+        color: black;
+    }
 }
 
 .container {
@@ -146,6 +183,10 @@ input::placeholder {
     }
 }
 
+.icone {
+    display: flex;
+}
+
 .footer {
     color: white;
     background-color: hsl(12, 7%, 27%);
@@ -170,3 +211,59 @@ input::placeholder {
     margin-right: .5em;
     width: 15px;
 }
+
+/** ******************** PAGE PALETTE GOÛT ********************* **/
+
+.container-palette {
+    background-color: #F7F7F7;
+}
+
+.title-palette {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0 0 0;
+    font-family: $font-shrikhand;
+    font-size: 1.8em;
+}
+
+.entrée, .plats, .desserts {
+    &__card {
+        @include bloc-plat()
+    }
+    &__card div {
+        display: flex;
+        justify-content: space-between;
+        padding: .2em;
+        font-weight: 300;
+    }
+    &__card > div > p {
+        text-overflow: ellipsis;
+    }
+    &__card div > p:last-child {
+        font-weight: 700;
+        margin-left: 1.5em;
+    }
+}
+
+.entrée h2, .plats h2, .desserts h2 {
+    text-transform: uppercase;
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 1.1em;
+    margin: 2em 1em 1em 1em;
+    padding-bottom: 5px;
+}
+
+.underline {
+    border-bottom: 3px solid $clr-tertiaire;
+    padding-bottom: .3em;
+}
+
+.entrée h3, .plats h3, .desserts h3 {
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: .2em;
+}
+
+
