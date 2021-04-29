@@ -14,11 +14,6 @@
   box-shadow: 0 0 10px 7px lightgrey;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-}
-
 header > h1 {
   border-bottom: 1px solid lightgrey;
   box-shadow: 0 2px 5px lightgrey;
@@ -183,9 +178,29 @@ input::placeholder {
   width: 15px;
 }
 
-/** ******************** PAGE PALETTE GOÛT ********************* **/
+/** ******************** PAGE SECONDAIRES ********************* **/
+.header-secondaire > h1 {
+  display: flex;
+  align-items: center;
+}
+
+.fa-arrow-left {
+  padding-left: 1em;
+  font-size: 1.5em;
+}
+
+.image-top {
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+  position: absolute;
+}
+
 .container-palette {
+  position: relative;
+  top: 13em;
   background-color: #F7F7F7;
+  border-radius: 35px 35px 0 0;
 }
 
 .title-palette {
@@ -210,7 +225,10 @@ input::placeholder {
   padding: 0.2em;
   font-weight: 300;
 }
-.entrée__card > div > p, .plats__card > div > p, .desserts__card > div > p {
+.entrée__card > div > p:first-child, .plats__card > div > p:first-child, .desserts__card > div > p:first-child {
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .entrée__card div > p:last-child, .plats__card div > p:last-child, .desserts__card div > p:last-child {
@@ -237,6 +255,11 @@ input::placeholder {
   font-weight: 500;
   font-size: 1.1em;
   padding: 0.2em;
+}
+
+.footer-secondaire {
+  position: relative;
+  bottom: -13em;
 }
 
 /*# sourceMappingURL=style.css.map */
