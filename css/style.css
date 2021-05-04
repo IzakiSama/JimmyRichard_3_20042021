@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/** ******************** MIXINS ********************* **/
+/** ******************** SCSS PAGE ACCUEIL ********************* **/
 .btn {
   text-align: center;
 }
@@ -99,16 +101,37 @@ input::placeholder {
   display: flex;
   font-family: "Roboto", sans sérif;
   font-weight: 500;
-  margin: 1.7em 0;
+  margin: 1.7em 0 1.7em 0.7em;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
   padding: 1.5em;
 }
 .fonctionnality__card:hover {
   background-color: #F7F1FF;
+  box-shadow: 0 8px 8px lightgrey;
 }
-.fonctionnality__card > p {
-  margin-left: 1em;
+.fonctionnality__card:hover .fas {
+  color: #9356DC;
+}
+.fonctionnality__card > li {
+  counter-increment: li;
+}
+.fonctionnality__card > li:before {
+  content: counter(li);
+  padding: 5px 9px;
+  margin-left: -3em;
+  background: #9356DC;
+  border-radius: 60px;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;
+}
+.fonctionnality__card > li > i {
+  margin: 0 1.5em;
+}
+
+ol {
+  counter-reset: li;
 }
 
 .restaurant {
@@ -131,22 +154,56 @@ input::placeholder {
   box-shadow: 0 2px 5px lightgrey;
   font-family: "Roboto", sans sérif;
 }
-
-.restaurant__card > h3 {
+.restaurant__card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.restaurant__card > div > h3 {
   padding: 0 0 0 1em;
   margin: 1em 0 0.5em 0;
   font-weight: 700;
 }
-
 .restaurant__card > p {
   padding: 0 0 1em 1em;
 }
-
 .restaurant__card > img {
   object-fit: cover;
   width: 100%;
   height: 10em;
   border-radius: 20px 20px 0 0;
+}
+.restaurant__card > div > .fa-heart {
+  margin-right: 1em;
+  font-size: 1.3em;
+}
+
+.fa-heart:hover {
+  transition: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+
+.restaurant__card > .new {
+  position: absolute;
+  right: 3em;
+  top: 71em;
+  background-color: #99E2D0;
+  text-align: center;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  color: #227762;
+  font-weight: bold;
+}
+
+.restaurant__card > .new-2 {
+  position: absolute;
+  right: 3em;
+  top: 91em;
+  background-color: #99E2D0;
+  text-align: center;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  color: #227762;
+  font-weight: bold;
 }
 
 .icone {
@@ -219,7 +276,7 @@ input::placeholder {
   font-family: "Roboto", sans sérif;
   background-color: white;
 }
-.entrée__card div, .plats__card div, .desserts__card div {
+.entrée__card > div, .plats__card > div, .desserts__card > div {
   display: flex;
   justify-content: space-between;
   padding: 0.2em;
@@ -234,6 +291,16 @@ input::placeholder {
 .entrée__card div > p:last-child, .plats__card div > p:last-child, .desserts__card div > p:last-child {
   font-weight: 700;
   margin-left: 1.5em;
+}
+.entrée__card:hover > .check, .plats__card:hover > .check, .desserts__card:hover > .check {
+  transform: scaleX(1);
+}
+
+.check {
+  background-color: red;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 1000ms linear;
 }
 
 .entrée h2, .plats h2, .desserts h2 {
