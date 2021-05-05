@@ -1,4 +1,26 @@
 @charset "UTF-8";
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  17% {
+    opacity: 0.2;
+    transform: scale(0.5);
+  }
+  24% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+  46% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /** ******************** MIXINS ********************* **/
 /** ******************** SCSS PAGE ACCUEIL ********************* **/
 .btn {
@@ -149,6 +171,7 @@ ol {
 }
 
 .restaurant__card {
+  position: relative;
   margin: 1.3em;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
@@ -158,6 +181,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  position: relative;
 }
 .restaurant__card > div > h3 {
   padding: 0 0 0 1em;
@@ -176,16 +200,26 @@ ol {
 .restaurant__card > div > .fa-heart {
   margin-right: 1em;
   font-size: 1.3em;
+  position: absolute;
+  right: 0;
+  top: 0.7em;
 }
-
-.fa-heart:hover {
-  transition: linear-gradient(to bottom right, #FF79DA, #9356DC);
+.restaurant__card > div > .first {
+  color: black;
+}
+.restaurant__card > div > .last {
+  color: #9356DC;
+  opacity: 0;
+}
+.restaurant__card > div > .last:hover {
+  animation: opacity 400ms;
+  animation-fill-mode: forwards;
 }
 
 .restaurant__card > .new {
   position: absolute;
-  right: 3em;
-  top: 71em;
+  right: 1em;
+  top: 1em;
   background-color: #99E2D0;
   text-align: center;
   padding: 0.5em 1em;
@@ -196,8 +230,8 @@ ol {
 
 .restaurant__card > .new-2 {
   position: absolute;
-  right: 3em;
-  top: 91em;
+  right: 1em;
+  top: 1em;
   background-color: #99E2D0;
   text-align: center;
   padding: 0.5em 1em;

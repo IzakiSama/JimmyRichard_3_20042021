@@ -4,6 +4,29 @@ $clr-tertiaire : #99E2D0;
 $font-roboto : "Roboto", sans sérif;
 $font-shrikhand : "Shrikhand", sans sérif;
 
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    17% {
+        opacity: .2;
+        transform: scale(.5);
+    }
+    24% {
+        opacity: .4;
+        transform: scale(.7);
+    }
+    46% {
+        opacity: .6;
+        transform: scale(.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /** ******************** MIXINS ********************* **/
 
 @mixin bloc-shadow {
@@ -183,6 +206,7 @@ ol {
 
 .restaurant {
     &__card {
+        position: relative;
         margin: 1.3em;
         border-radius: 20px;
         box-shadow: 0 2px 5px lightgrey;
@@ -192,6 +216,7 @@ ol {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        position: relative;
     }
     &__card > div > h3 {
         padding: 0 0 0 1em;
@@ -201,7 +226,7 @@ ol {
     &__card > p {
         padding: 0 0 1em 1em;
     }
-    &__card > img{
+    &__card > img {
         object-fit: cover;
         width: 100%;
         height: 10em;
@@ -210,24 +235,34 @@ ol {
     &__card > div > .fa-heart {
         margin-right: 1em;
         font-size: 1.3em;
+        position: absolute;
+        right: 0;
+        top: .7em;
     }
-}
-
-.fa-heart:hover {
-    transition: linear-gradient(to bottom right, $clr-secondaire, $clr-primaire);
+    &__card > div > .first {
+        color: black;
+    }
+    &__card > div > .last {
+        color: $clr-primaire;
+        opacity: 0;
+        &:hover {
+            animation: opacity 400ms;
+            animation-fill-mode: forwards;
+        }
+    }
 }
 
 .restaurant__card > .new {
     position: absolute;
-    right: 3em;
-    top: 71em;
+    right: 1em;
+    top: 1em;
     @include bloc-new()
 }
 
 .restaurant__card > .new-2 {
     position: absolute;
-    right: 3em;
-    top: 91em;
+    right: 1em;
+    top: 1em;
     @include bloc-new()
 }
 
