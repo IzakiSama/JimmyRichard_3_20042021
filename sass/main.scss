@@ -27,6 +27,17 @@ $font-shrikhand : "Shrikhand", sans sérif;
     }
 }
 
+@keyframes translate-card {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 /** ******************** MIXINS ********************* **/
 
 @mixin bloc-shadow {
@@ -328,7 +339,8 @@ ol {
 
 .entrée, .plats, .desserts {
     &__card {
-        @include bloc-plat()
+        @include bloc-plat();
+        animation: translate-card 1000ms linear;
     }
     &__card > div {
         display: flex;
@@ -467,7 +479,7 @@ $width: 200px;
     }
 }
 
-@keyframes opacity {
+@keyframes opacity-load {
     0%,24% {
         opacity: 1;
         z-index: 1;
@@ -494,7 +506,7 @@ $width: 200px;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    animation: opacity 1500ms linear;
+    background-color: white;
+    animation: opacity-load 1500ms linear;
     animation-fill-mode: forwards;
 }
