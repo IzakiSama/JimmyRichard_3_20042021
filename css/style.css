@@ -85,7 +85,7 @@ a:visited {
   font-size: 1.2em;
   padding: 0.5em 1em;
 }
-.center-top__texte > button {
+.center-top__texte > a > button {
   margin-top: 1em;
   padding: 1em;
   border-radius: 30px;
@@ -203,9 +203,6 @@ ol {
   position: absolute;
   right: 0;
   top: 0.7em;
-}
-.restaurant__card > div > .first {
-  color: black;
 }
 .restaurant__card > div > .last {
   color: #9356DC;
@@ -331,7 +328,7 @@ ol {
 }
 
 .check {
-  background-color: red;
+  background-color: #9356DC;
   transform-origin: right;
   transform: scaleX(0);
   transition: transform 1000ms linear;
@@ -361,6 +358,103 @@ ol {
 .footer-secondaire {
   position: relative;
   bottom: -13em;
+}
+
+/** ******************** LOADER ********************* **/
+/**taille loader**/
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+}
+.loader:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.circular {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 30em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes color {
+  100%, 0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
+}
+@keyframes opacity {
+  0%, 24% {
+    opacity: 1;
+    z-index: 1;
+  }
+  46% {
+    opacity: 0.7;
+  }
+  61% {
+    opacity: 0.5;
+  }
+  77% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+.showbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  animation: opacity 1500ms linear;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
