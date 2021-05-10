@@ -310,39 +310,58 @@ ol {
 }
 
 .entrée__card, .plats__card, .desserts__card {
-  padding: 0.7em;
+  padding-left: 0.7em;
   margin: 1em 1em 0 1em;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
   font-family: "Roboto", sans sérif;
   background-color: white;
   animation: translate-card 1000ms linear;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 .entrée__card > div, .plats__card > div, .desserts__card > div {
-  display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 0.2em;
   font-weight: 300;
+  flex-direction: column;
 }
-.entrée__card > div > p:first-child, .plats__card > div > p:first-child, .desserts__card > div > p:first-child {
+.entrée__card > div > div > .first-child, .plats__card > div > div > .first-child, .desserts__card > div > div > .first-child {
   font-size: 0.9em;
+  margin: 0.2em 0 0.5em;
+  padding: 0.2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.entrée__card div > p:last-child, .plats__card div > p:last-child, .desserts__card div > p:last-child {
+.entrée__card div > div > p:last-child, .plats__card div > div > p:last-child, .desserts__card div > div > p:last-child {
   font-weight: 700;
-  margin-left: 1.5em;
+}
+.entrée__card div > div, .plats__card div > div, .desserts__card div > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .entrée__card:hover > .check, .plats__card:hover > .check, .desserts__card:hover > .check {
-  transform: scaleX(1);
+  transform: translateX(0);
 }
 
-.check {
+.entrée__card > .check {
+  width: 3.5em;
   background-color: #9356DC;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 1000ms linear;
+  transform: translateX(100%);
+  transition: transform 500ms linear;
+}
+
+.fa-check-circle {
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  margin-top: 0.8em;
+  transform: rotate(-360deg);
+  transition: transform 500ms linear;
 }
 
 .entrée h2, .plats h2, .desserts h2 {
@@ -364,6 +383,7 @@ ol {
   font-weight: 500;
   font-size: 1.1em;
   padding: 0.2em;
+  margin-top: 0.5em;
 }
 
 .footer-secondaire {

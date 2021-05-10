@@ -54,7 +54,7 @@ $font-shrikhand : "Shrikhand", sans sérif;
 }
 
 @mixin bloc-plat {
-    padding: .7em;
+    padding-left: .7em;
     margin: 1em 1em 0 1em;
     border-radius: 20px;
     box-shadow: 0 2px 5px lightgrey;
@@ -341,37 +341,54 @@ ol {
     &__card {
         @include bloc-plat();
         animation: translate-card 1000ms linear;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
     }
     &__card > div {
-        display: flex;
+        width: 100%;
         justify-content: space-between;
         padding: .2em;
         font-weight: 300;
+        flex-direction: column;
     }
-    &__card > div > p:first-child {
+    &__card > div > div > .first-child {
         font-size: .9em;
+        margin: .2em 0 .5em;
+        padding: .2em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &__card div > p:last-child {
+    &__card div > div > p:last-child {
         font-weight: 700;
-        margin-left: 1.5em;
+    }
+    &__card div > div {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
     }
     &__card {
         &:hover > .check {
-            transform: scaleX(1);
+            transform: translateX(0);
         }
     }
 }
 
-.check {
+.entrée__card > .check {
+    width: 3.5em;
     background-color: $clr-primaire;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 1000ms linear;
+    transform: translateX(100%);
+    transition: transform 500ms linear;
 }
-
+ .fa-check-circle {
+     display: flex;
+     font-size: 1.5em;
+     justify-content: center;
+     margin-top: .8em;
+     transform: rotate(-360deg);
+     transition: transform 500ms linear;
+ }
 
 .entrée h2, .plats h2, .desserts h2 {
     text-transform: uppercase;
@@ -392,6 +409,7 @@ ol {
     font-weight: 500;
     font-size: 1.1em;
     padding: .2em;
+    margin-top: .5em;
 }
 
 .footer-secondaire {
