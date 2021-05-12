@@ -347,10 +347,8 @@ ol {
     }
     &__card > div {
         width: 100%;
-        justify-content: space-between;
         padding: .2em;
         font-weight: 300;
-        flex-direction: column;
     }
     &__card > div > div > .first-child {
         font-size: .9em;
@@ -368,26 +366,30 @@ ol {
         align-items: baseline;
         justify-content: space-between;
     }
+    &__card > .check {
+        width: 4.5em;
+        background-color: $clr-tertiaire;
+        transition: 500ms linear;
+        margin: 0 -5em 0 1em;
+    }
     &__card {
         &:hover > .check {
-            transform: translateX(0);
+            margin-right: 0em;
+            transition: 500ms linear;
+            .fa-check-circle {
+                transform: rotate(360deg);
+                transition: transform 500ms linear;
+            }
         }
     }
 }
 
-.entrée__card > .check {
-    width: 3.5em;
-    background-color: $clr-primaire;
-    transform: translateX(100%);
-    transition: transform 500ms linear;
-}
  .fa-check-circle {
      display: flex;
+     color: white;
      font-size: 1.5em;
      justify-content: center;
      margin-top: .8em;
-     transform: rotate(-360deg);
-     transition: transform 500ms linear;
  }
 
 .entrée h2, .plats h2, .desserts h2 {

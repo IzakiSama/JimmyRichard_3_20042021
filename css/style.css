@@ -323,10 +323,8 @@ ol {
 }
 .entrée__card > div, .plats__card > div, .desserts__card > div {
   width: 100%;
-  justify-content: space-between;
   padding: 0.2em;
   font-weight: 300;
-  flex-direction: column;
 }
 .entrée__card > div > div > .first-child, .plats__card > div > div > .first-child, .desserts__card > div > div > .first-child {
   font-size: 0.9em;
@@ -344,24 +342,27 @@ ol {
   align-items: baseline;
   justify-content: space-between;
 }
-.entrée__card:hover > .check, .plats__card:hover > .check, .desserts__card:hover > .check {
-  transform: translateX(0);
+.entrée__card > .check, .plats__card > .check, .desserts__card > .check {
+  width: 4.5em;
+  background-color: #99E2D0;
+  transition: 500ms linear;
+  margin: 0 -5em 0 1em;
 }
-
-.entrée__card > .check {
-  width: 3.5em;
-  background-color: #9356DC;
-  transform: translateX(100%);
+.entrée__card:hover > .check, .plats__card:hover > .check, .desserts__card:hover > .check {
+  margin-right: 0em;
+  transition: 500ms linear;
+}
+.entrée__card:hover > .check .fa-check-circle, .plats__card:hover > .check .fa-check-circle, .desserts__card:hover > .check .fa-check-circle {
+  transform: rotate(360deg);
   transition: transform 500ms linear;
 }
 
 .fa-check-circle {
   display: flex;
+  color: white;
   font-size: 1.5em;
   justify-content: center;
   margin-top: 0.8em;
-  transform: rotate(-360deg);
-  transition: transform 500ms linear;
 }
 
 .entrée h2, .plats h2, .desserts h2 {
