@@ -309,7 +309,7 @@ ol {
   font-size: 1.8em;
 }
 
-.entrée__card, .plats__card, .desserts__card {
+.entree__card, .plats__card, .desserts__card {
   padding-left: 0.7em;
   margin: 1em 1em 0 1em;
   border-radius: 20px;
@@ -321,38 +321,41 @@ ol {
   justify-content: space-between;
   overflow: hidden;
 }
-.entrée__card > div, .plats__card > div, .desserts__card > div {
-  width: 100%;
-  padding: 0.2em;
-  font-weight: 300;
-}
-.entrée__card > div > div > .first-child, .plats__card > div > div > .first-child, .desserts__card > div > div > .first-child {
-  font-size: 0.9em;
-  margin: 0.2em 0 0.5em;
-  padding: 0.2em;
+.entree__card h3, .entree__card .first-child, .plats__card h3, .plats__card .first-child, .desserts__card h3, .desserts__card .first-child {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.entrée__card div > div > p:last-child, .plats__card div > div > p:last-child, .desserts__card div > div > p:last-child {
+.entree__card > div, .plats__card > div, .desserts__card > div {
+  width: 100%;
+  padding: 0.2em;
+  font-weight: 300;
+  overflow: hidden;
+}
+.entree__card > div > div > .first-child, .plats__card > div > div > .first-child, .desserts__card > div > div > .first-child {
+  font-size: 0.9em;
+  margin: 0.2em 0 0.5em;
+  padding: 0.2em;
+}
+.entree__card div > div > p:last-child, .plats__card div > div > p:last-child, .desserts__card div > div > p:last-child {
   font-weight: 700;
 }
-.entrée__card div > div, .plats__card div > div, .desserts__card div > div {
+.entree__card div > div, .plats__card div > div, .desserts__card div > div {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-.entrée__card > .check, .plats__card > .check, .desserts__card > .check {
+.entree__card > .check, .plats__card > .check, .desserts__card > .check {
   width: 4.5em;
   background-color: #99E2D0;
   transition: 500ms linear;
   margin: 0 -5em 0 1em;
 }
-.entrée__card:hover > .check, .plats__card:hover > .check, .desserts__card:hover > .check {
+.entree__card:hover > .check, .plats__card:hover > .check, .desserts__card:hover > .check {
   margin-right: 0em;
   transition: 500ms linear;
 }
-.entrée__card:hover > .check .fa-check-circle, .plats__card:hover > .check .fa-check-circle, .desserts__card:hover > .check .fa-check-circle {
+.entree__card:hover > .check .fa-check-circle, .plats__card:hover > .check .fa-check-circle, .desserts__card:hover > .check .fa-check-circle {
   transform: rotate(360deg);
   transition: transform 500ms linear;
 }
@@ -365,7 +368,7 @@ ol {
   margin-top: 0.8em;
 }
 
-.entrée h2, .plats h2, .desserts h2 {
+.entree h2, .plats h2, .desserts h2 {
   text-transform: uppercase;
   font-family: "Roboto", sans sérif;
   font-weight: 300;
@@ -379,7 +382,7 @@ ol {
   padding-bottom: 0.3em;
 }
 
-.entrée h3, .plats h3, .desserts h3 {
+.entree h3, .plats h3, .desserts h3 {
   font-family: "Roboto", sans sérif;
   font-weight: 500;
   font-size: 1.1em;
