@@ -533,3 +533,30 @@ $width: 200px;
     animation: opacity-load 1500ms linear;
     animation-fill-mode: forwards;
 }
+
+@media (min-width: 1025px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        & > a {
+            width: 50%;
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        .entree, .plats, .desserts {
+            width: 100%;
+        }
+    }
+}

@@ -492,4 +492,30 @@ ol {
   animation-fill-mode: forwards;
 }
 
+@media (min-width: 1025px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .restaurant > a {
+    width: 50%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .main .entree, .main .plats, .main .desserts {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
