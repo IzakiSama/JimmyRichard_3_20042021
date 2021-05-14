@@ -509,6 +509,14 @@ ol {
     width: 50%;
   }
 
+  .title-palette {
+    display: flex;
+    justify-content: center;
+  }
+  .title-palette h2 {
+    margin-right: 0.5em;
+  }
+
   .main {
     display: flex;
     flex-direction: row;

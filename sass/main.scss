@@ -552,6 +552,14 @@ $width: 200px;
         }
     }
 
+    .title-palette {
+        display: flex;
+        justify-content: center;
+        h2 {
+            margin-right: 0.5em;
+        }
+    }
+
     .main {
         display: flex;
         flex-direction: row;
