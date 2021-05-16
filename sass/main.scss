@@ -1,8 +1,8 @@
 $clr-primaire : #9356DC;
 $clr-secondaire : #FF79DA;
 $clr-tertiaire : #99E2D0;
-$font-roboto : "Roboto", sans sérif;
-$font-shrikhand : "Shrikhand", sans sérif;
+$font-roboto : "Roboto", "sans sérif";
+$font-shrikhand : "Shrikhand", "sans sérif";
 
 @keyframes opacity {
     0% {
@@ -207,12 +207,11 @@ ol {
 .restaurant {
     background-color: #F7F7F7;
     padding-bottom: 2em;
-}
-
-.restaurant > h2 {
-    padding-top: 2em;
-    margin: 0 0 1em 1em;
-    @include accueil-h2()
+    h2 {
+        padding-top: 2em;
+        margin: 0 0 1em 1em;
+        @include accueil-h2()
+    }
 }
 
 .restaurant {
@@ -542,13 +541,27 @@ $width: 200px;
         align-items: center;
     }
 
+    .fonctionnality {
+        display: flex;
+        &__card {
+            margin-right: 2em;
+        }
+    }
+
     .restaurant {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        & > a {
-            width: 50%;
+        h2 {
+            margin-left: 0;
+        }
+        .restaurant-bloc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a {
+                width: 45%;
+            }
         }
     }
 

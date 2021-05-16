@@ -44,7 +44,7 @@
   border: none;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   box-shadow: 0 0 10px 7px lightgrey;
 }
 
@@ -84,13 +84,13 @@ a:visited {
   background-color: #EDEDED;
 }
 .center-top__texte > h2 {
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 700;
   font-size: 1.5em;
   padding: 1em 2em 0.5em 2em;
 }
 .center-top__texte > p {
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 300;
   font-size: 1.2em;
   padding: 0.5em 1em;
@@ -101,7 +101,7 @@ a:visited {
   border-radius: 30px;
   border: hidden;
   color: white;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 400;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0 5px 7px lightgray;
@@ -114,13 +114,13 @@ a:visited {
 }
 
 input::placeholder {
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   color: black;
 }
 
 .container > h2 {
   margin-top: 1.7em;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 700;
   font-size: 1.5em;
 }
@@ -131,7 +131,7 @@ input::placeholder {
 
 .fonctionnality__card {
   display: flex;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 500;
   margin: 1.7em 0 1.7em 0.7em;
   border-radius: 20px;
@@ -170,12 +170,11 @@ ol {
   background-color: #F7F7F7;
   padding-bottom: 2em;
 }
-
-.restaurant > h2 {
+.restaurant h2 {
   padding-top: 2em;
   margin: 0 0 1em 1em;
   margin-top: 1.7em;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 700;
   font-size: 1.5em;
 }
@@ -185,7 +184,7 @@ ol {
   margin: 1.3em;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
 }
 .restaurant__card > div {
   display: flex;
@@ -257,14 +256,14 @@ ol {
   padding-bottom: 1.5em;
 }
 .footer__title {
-  font-family: "Shrikhand", sans sérif;
+  font-family: "Shrikhand", "sans sérif";
   padding: 1.5em 0 0.5em 1.5em;
   font-size: 1.1em;
 }
 .footer__list-nav > a {
   color: white;
   text-decoration: none;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 400;
   display: flex;
   margin: 0.5em 1.5em;
@@ -305,7 +304,7 @@ ol {
   display: flex;
   justify-content: space-around;
   padding: 1em 0 0 0;
-  font-family: "Shrikhand", sans sérif;
+  font-family: "Shrikhand", "sans sérif";
   font-size: 1.8em;
 }
 
@@ -314,7 +313,7 @@ ol {
   margin: 1em 1em 0 1em;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   background-color: white;
   animation: translate-card 1000ms linear;
   display: flex;
@@ -370,7 +369,7 @@ ol {
 
 .entree h2, .plats h2, .desserts h2 {
   text-transform: uppercase;
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 300;
   font-size: 1.1em;
   margin: 2em 1em 1em 1em;
@@ -383,7 +382,7 @@ ol {
 }
 
 .entree h3, .plats h3, .desserts h3 {
-  font-family: "Roboto", sans sérif;
+  font-family: "Roboto", "sans sérif";
   font-weight: 500;
   font-size: 1.1em;
   padding: 0.2em;
@@ -499,14 +498,28 @@ ol {
     align-items: center;
   }
 
+  .fonctionnality {
+    display: flex;
+  }
+  .fonctionnality__card {
+    margin-right: 2em;
+  }
+
   .restaurant {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
-  .restaurant > a {
-    width: 50%;
+  .restaurant h2 {
+    margin-left: 0;
+  }
+  .restaurant .restaurant-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restaurant .restaurant-bloc a {
+    width: 45%;
   }
 
   .title-palette {
