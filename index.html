@@ -12,11 +12,12 @@
     <title>Oh My Food</title>
 </head>
 
-<header>
-    <h1><img class="logo-header" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"></h1>
-</header>
 
 <body>
+    <header>
+        <h1><img class="logo-header" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"></h1>
+    </header>
+
     <div class="showbox">
         <div class="loader">
             <svg class="circular" viewBox="25 25 50 50">
@@ -34,22 +35,18 @@
         <div class="center-top__texte">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
-            <a href="#explore"><button>Explorer nos restaurants</button></a>
+            <a href="#explore" class="button">Explorer nos restaurants</a>
         </div>
     </div>
 
     <section class="container">
         <h2>Fonctionnement</h2>
         <ol class="fonctionnality">
-            <div class="fonctionnality__card">
-                <li><i class="fas fa-mobile-alt"></i>Choississez un restaurant</li>
-            </div>
-            <div class="fonctionnality__card">
-                <li><i class="fas fa-bars"></i>Composez votre menu</li>
-            </div>
-            <div class="fonctionnality__card">
-                <li><i class="fas fa-store"></i>Dégustez au retaurant</li>
-            </div>
+            <li class="fonctionnality__card"><i class="fas fa-mobile-alt"></i>Choississez un restaurant</li>
+
+            <li class="fonctionnality__card"><i class="fas fa-bars"></i>Composez votre menu</li>
+            
+            <li class="fonctionnality__card"><i class="fas fa-store"></i>Dégustez au retaurant</li>
         </ol>
     </section>
 
@@ -107,15 +104,15 @@
             </a>
         </div>
     </section>
-</body>
 
-<footer class="footer">
-    <h1 class="footer__title">ohmyfood</h1>
-    <div class="footer__list-nav">
-        <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
-        <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
-        <a href="#">Mentions légales</a>
-        <a href="mailto:personne@hotmail.freu">Contact</a>
-    </div>
-</footer>
+    <footer class="footer">
+        <h1 class="footer__title">ohmyfood</h1>
+        <div class="footer__list-nav">
+            <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+            <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+            <a href="#">Mentions légales</a>
+            <a href="mailto:personne@hotmail.freu">Contact</a>
+        </div>
+    </footer>
+</body>
 </html>

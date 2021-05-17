@@ -43,7 +43,7 @@ $font-shrikhand : "Shrikhand", "sans sérif";
 @mixin bloc-shadow {
     border-radius: 20px;
     box-shadow: 0 2px 5px lightgrey;
-    padding: 1.5em;
+    padding: 1.3em;
 }
 
 @mixin accueil-h2 {
@@ -113,7 +113,7 @@ a {
 
 .center-top {
     text-align: center;
-    padding-bottom: 3em;
+    padding-bottom: 4em;
     background-color: #F7F7F7;
     &__research > input {
         border: hidden;
@@ -133,9 +133,9 @@ a {
         font-weight: 300;
         font-size: 1.2em;
         padding: .5em 1em;
+        margin-bottom: 2em;
     }
-    &__texte > a > button {
-        margin-top: 1em;
+    &__texte > .button {
         padding: 1em;
         border-radius: 30px;
         border: hidden;
@@ -169,6 +169,7 @@ input::placeholder {
 .fonctionnality {
     &__card {
         display: flex;
+        align-items: center;
         font-family: $font-roboto;
         font-weight: 500;
         margin: 1.7em 0 1.7em .7em;
@@ -181,12 +182,12 @@ input::placeholder {
             }
         }
     }
-    &__card > li {
+    li {
         counter-increment: li;
     }
-    &__card > li:before {
+    li:before {
         content: counter(li);
-        padding: 5px 9px;
+        padding: 6px 9px;
         margin-left: -3em;
         background: $clr-primaire;
         border-radius: 60px;
@@ -194,7 +195,7 @@ input::placeholder {
         font-size: 0.8em;
         color: white;
     }
-    &__card > li > i {
+    li > i {
         margin: 0 1.5em;
     }
 }

@@ -73,7 +73,7 @@ a:visited {
 
 .center-top {
   text-align: center;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
   background-color: #F7F7F7;
 }
 .center-top__research > input {
@@ -94,9 +94,9 @@ a:visited {
   font-weight: 300;
   font-size: 1.2em;
   padding: 0.5em 1em;
+  margin-bottom: 2em;
 }
-.center-top__texte > a > button {
-  margin-top: 1em;
+.center-top__texte > .button {
   padding: 1em;
   border-radius: 30px;
   border: hidden;
@@ -131,12 +131,13 @@ input::placeholder {
 
 .fonctionnality__card {
   display: flex;
+  align-items: center;
   font-family: "Roboto", "sans sérif";
   font-weight: 500;
   margin: 1.7em 0 1.7em 0.7em;
   border-radius: 20px;
   box-shadow: 0 2px 5px lightgrey;
-  padding: 1.5em;
+  padding: 1.3em;
 }
 .fonctionnality__card:hover {
   background-color: #F7F1FF;
@@ -145,12 +146,12 @@ input::placeholder {
 .fonctionnality__card:hover .fas {
   color: #9356DC;
 }
-.fonctionnality__card > li {
+.fonctionnality li {
   counter-increment: li;
 }
-.fonctionnality__card > li:before {
+.fonctionnality li:before {
   content: counter(li);
-  padding: 5px 9px;
+  padding: 6px 9px;
   margin-left: -3em;
   background: #9356DC;
   border-radius: 60px;
@@ -158,7 +159,7 @@ input::placeholder {
   font-size: 0.8em;
   color: white;
 }
-.fonctionnality__card > li > i {
+.fonctionnality li > i {
   margin: 0 1.5em;
 }
 
